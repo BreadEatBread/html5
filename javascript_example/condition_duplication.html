@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            condition_duplication
+        </title>
+        <script>
+            var date = new Date();
+            var hours = date.getHours();
+
+            if(hours < 5) {
+                alert('코야할 시간이야');
+            } else {
+                if(hours < 9){
+                    alert('출근요');
+                } else {
+                    if (hours < 12){
+                        alert('빈둥빈둥');
+                    } else {
+                        if(hours < 14){
+                            alert('식사');
+                        } else {
+                            
+                        }
+                    }
+                }
+
+            }
+        </script>
+    </head>
+</html>

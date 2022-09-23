@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> exam_digits</title>
+        <script>
+                        
+            var input = prompt("입력해주세요", "입력");
+
+            var a = input;
+
+            var bill = parseInt(a/1000);
+            var hund = parseInt(a%1000/100);
+            var ten = parseInt(a%100/10);
+            var one = parseInt(a%10/1);
+        
+
+            alert('입력값' + a + '\n천의자리 :' + bill + '\n백의자리 :' + hund + '\n십의자리 :' + ten + '\n일의자리 :' + one );
+            
+        </script>
+    </head>
+</html>

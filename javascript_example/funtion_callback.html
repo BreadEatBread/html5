@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> function_callback</title>
+
+        <script>
+
+            function callTenTimes(callback) {
+
+                for (var i = 0; i < 10; i++) {
+                    callback();
+
+                }
+            }
+
+            var callback = function () {
+                alert('함수호출');
+            }
+            callTenTimes(callback);
+        </script>
+    </head>
+</html>

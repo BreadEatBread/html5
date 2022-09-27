@@ -4,7 +4,14 @@
         <title>factorial</title>
         <script>
             var input = prompt('숫자를 입력하세요 ', '입력');
-            alert(input *= input);
+            
+            function recursive(n) {
+                if (n == 1) {
+                    return 1;
+                }
+                return recursive(n - 1) * n;
+            }
+            alert(recursive);
 
         </script>
     </head>

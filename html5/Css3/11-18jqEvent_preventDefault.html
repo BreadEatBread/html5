@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Basic</title>
+        <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('a').click(function (event) {
+                    alert('click');
+
+                    evnet.preventDefault();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <a href="http://hanb.co.kr">Hanbit Media</a>
+    </body>
+</html>

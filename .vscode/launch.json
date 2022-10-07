@@ -9,6 +9,18 @@
             "request": "launch",
             "name": "Open output_alert.html",
             "url": "http://localhost:3000/${relativeFile}"
+        },
+        {
+            "type": "pwa-chrome",
+            "name": "http://127.0.0.1:3000/html5/Css3/11-19reference_validate.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/html5/Css3/11-19reference_validate.html"
+        },
+        {
+            "type": "pwa-chrome",
+            "name": "http://127.0.0.1:3000/html5/Css3/11-20jqAnimate_fade.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/html5/Css3/11-20jqAnimate_fade.html"
         }
     ]
 }

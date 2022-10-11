@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>카드 만들기</title>
+    <style>
+        .box {
+            border-width: thin;
+            border-color: black;
+            width: 165px;
+            text-align: center;
+            padding: 20px 20px;
+            border-radius: 20px 20px 20px 20px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('img').attr({
+                src: function (index) {
+
+                    var size = (index + 1) * 100;
+
+                    return 'http://place-hold.it/' + size + 'x100';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <center>
+        <div class="box">
+            <h1>Card</h1>
+            <img>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Duis sem ligula, volutpat in condimentum et,
+                hendrerit amet nisi.
+            </p>
+        </div>
+    </center>
+</body>
+</html>

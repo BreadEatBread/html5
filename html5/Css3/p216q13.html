@@ -3,32 +3,30 @@
 <head>
     <title>카드 만들기</title>
     <style>
-        .box {
-            border-width: thin;
-            border-color: black;
-            width: 165px;
+        /* box 설정 */
+        .box {                        
+            width: 165px; 
             text-align: center;
-            padding: 20px 20px;
-            border-radius: 20px 20px 20px 20px;
+            padding: 15px 50px; /* 박스 위 아래 너비 설정 */
+            border-radius: 6px 6px 6px 6px; /* 박스 모서리를 둥글게 */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);/* 박스 그림자 설정 */
         }
+        /* img 의 위치를 조정하기 위한 class */
+        
     </style>
+    <!-- Card 안 이미지 생성 Script code11-6에서 긁어옴 -->
     <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $(document).ready(function () {
-
-            $('img').attr({
-                src: function (index) {
-
-                    var size = (index + 1) * 100;
-
-                    return 'http://place-hold.it/' + size + 'x100';
-                }
-            });
+    
+           $('img').attr({                
+            src: 'http://place-hold.it/100x100',
+           });      
         });
     </script>
+
 </head>
-<body>
-    <center>
+<body>    
         <div class="box">
             <h1>Card</h1>
             <img>
@@ -36,7 +34,6 @@
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Duis sem ligula, volutpat in condimentum et,
                 hendrerit amet nisi.
             </p>
-        </div>
-    </center>
+        </div>    
 </body>
 </html>

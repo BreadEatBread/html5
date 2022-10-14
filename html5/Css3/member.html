@@ -31,28 +31,19 @@
             margin-top: 15px;
         }
     </style>
-    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
-    <script>
-        $(document).ready(function () {
-
-            $('img').attr({
-                src: 'http://place-hold.it/150x150',
-            });
-        });
-    </script>
 </head>
 
 <body>
 
     <div class="box">
         <h1>회원가입</h1>
-        <img>
+        <img src="http://place-hold.it/150x150">
         <div class="container">
             <div><label>이메일</label><input type="text"></div>
-            <div><label>암호</label><input type="password"></div>
-            <div><label>암호확인</label><input type="password"></div>
+            <div><label>암호</label><input type="password" name="password"></div>
+            <div><label>암호확인</label><input type="password" name="passwordcheck"></div>
         </div>
-        <div><input class="submitsize" type="submit"></div>
+        <div><input class="submitsize" type="submit" name="submit"></div>
     </div>
 </body>
 

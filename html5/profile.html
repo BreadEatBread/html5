@@ -5,23 +5,59 @@
     <title>프로필</title>
     <style>
       #container {
-        width: 900px;
+        width: 320px;
         height: 100%;
         border: 1px solid #eeeeee;
         margin: 0 auto;
       }
+      #profile {
+        height: 100px;
+        padding: 10px;
+        background: #eeeeee;
+      }
+      .left {
+        float: left;
+      }
+      .imgbox {
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      .textbox {
+        background: #ee3414;
+        margin-left: 20px;
+        margin-top: 30px;
+        text-align: center;
+      }
+      .label {
+        display: block;
+      }
       #gallery {
         display: grid;
-        gap: 10px; /* grid 자식요소간의 간격 */
+        gap: 20px 10px; /* grid 자식요소간의 간격 */
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-columns: 250px 250px 250px;
+        /* grid-template-columns: 100px 100px 100px; */
         padding: 10px; /* 부모와 자식요소간의 간격*/
+      }
+      .gallerybox {
+        margin-left: 8px;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <div id="gallery">        
+      <div id="profile">
+        <div class="left imgbox"><img src="http://place-hold.it/60x60" /></div>
+        <div class="left textbox">6<span class="label">게시물</span></div>
+        <div class="left textbox">0<span class="label">팔로워</span></div>
+        <div class="left textbox">0<span class="label">팔로잉</span></div>
+      </div>
+      <div id="gallery">
+        <img class="gallerybox" src="http://place-hold.it/80x80" />
+        <img class="gallerybox" src="http://place-hold.it/80x80" />
+        <img class="gallerybox" src="http://place-hold.it/80x80" />
+        <img class="gallerybox" src="http://place-hold.it/80x80" />
+        <img class="gallerybox" src="http://place-hold.it/80x80" />
+        <img class="gallerybox" src="http://place-hold.it/80x80" />
       </div>
     </div>
   </body>

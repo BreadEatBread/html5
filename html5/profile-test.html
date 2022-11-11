@@ -7,28 +7,25 @@
       #container {
         width: 320px;
         height: 100vh;
+        margin: auto;
         border: 1px solid #eeeeee;
-        margin: 0 auto;
       }
       #profile {
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background: #eeeeee;
-        gap: 20px;
+        display: flex;
+        align-items: center; /* 수직 정렬 */
+        justify-content: space-between; /* 수평 정렬 */
+        padding: 20px;
+        text-align: center;
       }
-      .left {
-        float: left;
-      }      
       .label {
         display: block;
       }
       #gallery {
         display: grid;
-        gap: 20px; /* grid 자식요소간의 간격 */
         grid-template-columns: 80px 80px 80px;
-        justify-items: center;
+        justify-content: space-between;
+        gap: 20px;
         padding: 20px;
       }
     </style>

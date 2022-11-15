@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #calc {
+            width: 151px;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            padding: 1px;
+            gap: 1px;
+        }
+
+        input {
+            width: 100%;
+            border: 0px solid black;
+        }
+        button{
+            width: 37px;
+            border: 0px solid black;
+        }
+        button:active {
+            background-color: aqua;
+        }
+        button:hover {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="calc">
+        <input type="number">
+        <button value="AC">AC</button>
+        <button value="^">^</button>
+        <button value="%">%</button>
+        <button value="/">/</button>
+        <button value="7">7</button>
+        <button value="8">8</button>
+        <button value="9">9</button>
+        <button value="*">x</button>
+        <button value="4">4</button>
+        <button value="5">5</button>
+        <button value="6">6</button>
+        <button value="-">-</button>
+        <button value="1">1</button>
+        <button value="2">2</button>
+        <button value="3">3</button>
+        <button value="+">+</button>
+        <button value="0">0</button>
+        <button value="=">=</button>
+    </div>
+    <script>
+        var buttons = document.querySelectorAll("button");
+
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", (event) => {
+                var text = event.target.innerText;
+                document.querySelector("input").value += text;
+            });
+        }
+    </script>
+</body>
+
+</html>

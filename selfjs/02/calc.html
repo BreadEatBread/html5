@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        const left = parseInt(prompt('첫 번째 항을 입력하세요'));
+        const operator = prompt('연산자를 입력하세요');
+        const right = parseInt(prompt('두 번째 항을 입력하세요.'));
+
+        let result;
+
+        switch (operator) {
+            case '+':
+                result = left + right;
+                break;
+            case '-':
+                result = left - right;
+                break;
+            case '*':
+                result = left * right;
+                break;
+            case '/':
+                result = left / right;
+                break;
+        }
+
+        alert(`${left} ${operator} ${right} = ${result}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

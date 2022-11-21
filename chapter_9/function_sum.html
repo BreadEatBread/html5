@@ -1,0 +1,28 @@
+<script>
+    function sum(numbers) {
+        var answer = 0;
+
+        //  reduce 함수 사용
+        // return numbers.reduce((prev,cur) => prev * cur);
+
+        // for of 사용
+        // for (var number of numbers){      
+        //     answer += number;
+        // }
+        // return answer;
+
+        // forEach 사용
+        // numbers.forEach((number) => {
+        //     answer += number;
+        // })
+
+        // for 사용
+        for (var i = 0; i < numbers.length; i++) {
+            answer += numbers[i];
+        }
+        return answer;
+    }
+    document.write(sum([2022, 11, 17]));
+    document.write('<br>');
+    document.write(sum([1, 2, 3]));
+</script>

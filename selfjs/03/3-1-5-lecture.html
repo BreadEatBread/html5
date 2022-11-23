@@ -1,0 +1,20 @@
+<script>
+    //30분 전 시간 구하기
+    const ms = Date.now(); // 현재 시간을 밀리초로 가져옵니다.
+    const min30 = 30 * 60 * 1000; //30분
+    const date = new Date(ms - min30);
+    const hour = date.getHours();
+    const minutes = date.getMinutes();
+
+    if (hour < 9) {
+        alert('아침 먹을 시간입니다.');
+    } else if (hour == 12) {
+        alert('점심 먹을 시간입니다.')
+    } else if (hour >= 17) {
+        alert('저녁 먹을 시간입니다.')
+    } else if (minutes >= 50) {
+        alert('쉬는 시간입니다.');
+    } else {
+        alert('강의 시간입니다.')
+    }
+</script>

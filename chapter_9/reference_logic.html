@@ -2,6 +2,17 @@
     // Date 객체를 선언합니다: 현재 시간 측정
     var date = new Date();
     var month = date.getMonth() + 1;
+    const birth = Number(prompt('태어난 월을 입력하세요.'));
+
+    if (birth <= 2 || birth == 12) {
+        alert('겨울입니다.');
+    } else if (birth <= 5) {
+        alert('봄입니다.');
+    } else if (6 <= birth && birth <= 8) {
+        alert('여름입니다.');
+    } else if (9 <= birth && birth <= 11) {
+        alert('가을입니다.');
+    }
 
     // 조건문
     if (3 <= month && month <= 5) {

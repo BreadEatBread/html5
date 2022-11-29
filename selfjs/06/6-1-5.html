@@ -1,0 +1,18 @@
+<script>
+    const test = {
+        a() {
+            console.log(this)
+        },
+        b: () => {
+            var local = 'Joe';
+            console.log(this);
+        },
+    };
+    console.log(window.local);
+    console.log(test.a.name);
+
+    test.a();
+    test.b();
+    var a = test.a;
+    a();
+</script>

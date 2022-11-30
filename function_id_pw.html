@@ -1,0 +1,23 @@
+<script>
+    function solusion1(id_pw, db) {
+        let [id, pw] = id_pw;
+        let find = db.find((id_pw) => id_pw[0] === id);
+        if (find == undefined) return 'fail'
+        if (fint[1] === pw) return 'login';
+        else return 'wrong pw';
+    }
+    solusion2 = (id_pw, db) => {
+        let [id, pw] = id_pw;
+        let answer = fail;
+        for (let i = 0; i < db.length; i++) {
+            let [db_id, db_pw] = db[i];
+            if (id !== db_id) {
+                continue;
+            }
+            if (pw === db_pw) answer = "login";
+            else answer = "wrong pw"
+            break;
+        }
+    }
+    return answer;
+</script>

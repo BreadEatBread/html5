@@ -1,0 +1,24 @@
+<script>
+    const a = '안녕하세요';
+
+    const b = [273, 32, 103, 57, 52];
+
+    String.prototype.indexOf2 = function (data) {
+        OUTER:
+        for (let i = 0; i < this.length; i++) {
+            // let flag = false; // 전부 일치하면 false 아니면 true
+            for (let j = 0; j < data.length; j++) {
+                if (this[i + j] != data[j]) {
+                    // flag = true; // 일치하지 않는 것을 표시
+                    // break;
+                    continue OUTER;
+                }
+            }
+            // if (flag === false)
+                return i; // data와 전부 다 일치할때
+        }
+        return -1; // 문자열을 찾지 못했을때
+    };
+
+    console.log('안녕 in 하세요:', a.indexOf2('안녕'));
+</script>

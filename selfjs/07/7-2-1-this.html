@@ -1,0 +1,27 @@
+<h1></h1>
+<textarea></textarea>
+<script>    
+    const listener = function () {
+        const length = this.value.length;
+        h1.textContent = `글자 수: ${length}`;
+    };
+    const textarea = document.querySelector('textarea');
+    const h1 = document.querySelector('h1');
+    textarea.addEventListener('keyup', listener);
+</script>
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const textarea = document.querySelector('textarea');
+        const h1 = document.querySelector('h1');
+        const listener = function () {
+            const length = this.value.length;
+            h1.textContent = `글자 수: ${length}`;
+        }
+
+        textarea.addEventListener('keyup', listener);
+    })
+</script> -->
+<!-- <body>
+    <h1>글자 수: 0</h1>
+    <textarea></textarea>
+</body> -->

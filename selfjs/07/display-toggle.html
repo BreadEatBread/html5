@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <input type="button" id="hider" value="Toggle 버튼." />
+
+  <div id="text">Text</div>
+
+  <script>
+    /* 코드를 여기에 작성하세요 */
+    const button = document.querySelector('#hider');
+    const text = document.querySelector('#text');
+    button.addEventListener('click', () => {
+      if(text.style.display === 'none'){
+        text.style.display = 'block';
+      } else {
+        text.style.display = 'none';
+      }     
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<button>배경색 바꾸기</button>
+<script>
+    const btn = document.querySelector('button');
+
+    random = (number) => {
+        return Math.floor(Math.random() * (number + 1));
+    }
+
+    btn.onclick = () => {
+        const rndCol = [random(255), random(255), random(255)];
+        document.body.style.backgroundColor = `rgb(${rndCol})`;
+    };
+</script>

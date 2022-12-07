@@ -1,0 +1,11 @@
+<div id="clock"></div>
+<script>
+    const clock = document.querySelector('#clock');
+
+    setInterval (() => {
+        const date = new Date();
+        clock.innerText = date.toLocaleTimeString('ko-KR', {
+            timeStyle: 'long',
+        });
+    },100);
+</script>

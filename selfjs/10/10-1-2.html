@@ -1,0 +1,15 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<div id="root"></div>
+<script type="text/babel">
+    const name = '구름'
+    const imgUrl = 'http://placekitten.com/400/200'
+    const component = <div>
+        <h1>{name} 님 안녕하세요! </h1>
+        <img src= {imgUrl} />
+    </div>
+    const container = document.getElementById('root');
+
+    ReactDOM.createRoot(container).render(component)
+</script>

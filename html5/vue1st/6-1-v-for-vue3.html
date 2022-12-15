@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="n in list">{{n}}</li>
+      <!-- v-for를 사용 n ~ list 의 갯수까지 반복하여 {{n}} 안에 list에 들어있는 배열의 값 ex)list[0]~list[5] 까지 저장 -->
+    </ul>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script>
+    var app = Vue.createApp({
+      data() {
+        return {
+          list: ["Vue.js", "React.js", "Polymer.js", "Google", "Hanbit"],
+        };
+      },
+    });
+    app.mount('#app');
+  </script>
+</body>
+
+</html>

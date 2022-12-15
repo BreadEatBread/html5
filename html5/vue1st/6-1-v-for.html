@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <div id="app">
-      <ul>
-        <li v-for="n in list">{{n}}</li>
-      </ul>
-    </div>
-    <script src="https://unpkg.com/vue@2.7.13"></script>
-    <script>
-      new Vue({
-        el: "#app",
-        data: {
-          list: ["Vue.js", "React.js", "Polymer.js", "Google", "Hanbit"],
-        },
-      });
-    </script>
-  </body>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="n in list">{{n}}</li>
+    </ul>
+  </div>
+  <script src="https://unpkg.com/vue@2.7.13"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        list: ["Vue.js", "React.js", "Polymer.js", "Google", "Hanbit"],
+      },
+    });
+  </script>
+</body>
+
 </html>

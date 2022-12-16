@@ -11,11 +11,12 @@
             // color: ${(props) => props.checked ? 'blue' : 'red'};
             color: ${({ checked }) => checked ? 'blue' : 'black'};
             cursor: pointer;
+            display: inline-block;
             text-align: center;
-            first-child {
+            :first-child {
                 border-radius: 0.3em 0 0 0.3em;
             }
-            last-child {
+            :last-child {
                 border-radius: 0 0.3em 0.3em 0;
             }
         `;

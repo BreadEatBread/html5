@@ -1,0 +1,13 @@
+<script src="http://unpkg.com/axios"></script>
+<script>
+    axios.get('http://jsonplaceholder.typicode1.com/todos/1')
+        .then((response) => {
+            let data = response.data;
+            document.write(JSON.stringify(data)); // string
+            console.log(data); // object
+        })
+        .catch((error) => {
+            document.write(error);
+            console.error(error);
+        })
+</script>

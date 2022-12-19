@@ -1,0 +1,14 @@
+<script>
+    (async () => {
+        try {
+            let response = await fetch('http://jsonplaceholder.typicode.com/todos/1');
+            if (!response.ok) throw new Error(response.status);
+            let data = await response.json();
+            document.write(JSON.stringify(data)); // string
+            console.log(data); // object
+        } catch (error) {
+            document.write(error);
+            console.log(error);
+        }
+    })();
+</script>

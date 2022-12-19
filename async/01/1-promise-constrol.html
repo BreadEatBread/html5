@@ -1,0 +1,21 @@
+<script>
+    const now = Date.now();
+    const promise = new Promise((resolve, reject) => {
+        if (now % 2 === 0) {
+            resolve('짝수');
+        } else {
+            reject('홀수');
+        }
+    });
+
+    promise
+        .then((message) => {
+            document.write(message);
+        })
+        .catch((message) => {
+            document.write(error);
+        })
+        .finally(() => {
+            document.write('<p>완료</p>');
+        });
+</script>

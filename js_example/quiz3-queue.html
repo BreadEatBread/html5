@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <ul id="ulid">
+    <li>버튼을 누르면 li 요소가 추가됩니다.</li>
+  </ul>
+  <button id="testbtn">버튼을 누르세요!</button>
+  <script>
+    const queue = [
+      '1번째 텍스트',
+      '2번째 텍스트',
+      '3번째 텍스트'
+    ];
+    document.querySelector('#testbtn').addEventListener('click', () => {
+      let li = document.createElement('li');
+      let text = queue.shift() || '남은 요소가 없습니다.';
+      li.textContent = `${text}`;
+      document.querySelector('#ulid').appendChild(li);
+    })
+  </script>
+</body>
+
+</html>

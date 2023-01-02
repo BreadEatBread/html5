@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="change">
+            버튼을 클릭하여 내용을 변경해 보세요.
+        </div>
+        <button id="testbtn">버튼을 클릭하세요!</button>
+        <script>
+            // window.testbtn.addEventListener('click',()=>{
+            document.querySelector('#testBtn').addEventListener('click',()=>{
+                change.innerHTML = '이 내용은 자바스크립트에 의해 변경된 내용입니다.';
+            })
+        </script>
+    </body>
+</html>

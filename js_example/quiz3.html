@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <ul id="ulid">
+        <li>버튼을 누르면 li 요소가 추가됩니다.</li>
+    </ul>
+    <button id="testbtn">버튼을 누르세요!</button>
+    <script>
+        document.querySelector('#testbtn').addEventListener('click', () => {
+            let li = document.createElement('li');
+            li.textContent = "버튼을 눌러 추가된 li 요소 입니다.";
+            document.querySelector('#ulid').appendChild(li);
+        })
+    </script>
+    <!-- <script>
+        document.getElementById("testBtn").onclick = function () {
+          /*HTML 템플릿 사용*/
+          let template = document.createElement("template");
+          template.innerHTML = "<li>버튼을 눌러 추가된 li 요소 입니다.</li>";
+          document.querySelector("ul").appendChild(template.content.firstChild);
+          //document.querySelector('ul')
+          //.insertAdjacentHTML('beforeend','<li>버튼을 눌러 추가된 li 요소 입니다.</li>');
+        };
+      </script> -->
+
+      <!-- <script>
+        function handleClick() {
+          var plusUI = document.createElement("li");
+          plusUI.innerHTML = "<li>버튼을 눌러 추가된 li 요소 입니다.</li>";
+          document.getElementById("ulid").appendChild(plusUI);
+        }
+      </script> -->
+
+      <!-- <script>
+        let testBtn = document.querySelector("#testBtn");
+  
+        testBtn.addEventListener("click", handleClick);
+  
+        function handleClick() {
+          let plusUI = document.createElement("li");
+          plusUI.innerHTML = "버튼을 눌러 추가된 li 요소 입니다.";
+          document.getElementById("ulid").appendChild(plusUI);
+        }
+      </script> -->
+  
+  
+</body>
+
+</html>

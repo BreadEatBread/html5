@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html>
+<style>
+    table {
+        text-align: center;
+    }
+
+    #firsttr {
+        background-color: pink;
+    }
+
+    td {
+        background-color: aliceblue;
+    }
+
+    th {
+        width: 8rem;
+    }
+</style>
 
 <body>
     <div>
@@ -8,28 +25,32 @@
         <p>모든 구의 미세먼지를 표기해 주세요</p>
         <p>업데이트 버튼을 누를 때마다 지웠다 새로 씌여져야 합니다.</p>
         <button id="updatebtn">업데이트</button>
-        <ul id="data"></ul>
+
+        <table id="data" border="1px">
+            <tr id="firsttr">
+                <th>지역</th>
+                <th>미세먼지 농도</th>
+                <th>초미세먼지 농도</th>
+                <th>미세먼지 상태</th>
+            </tr>
+        </table>
     </div>
     <script>
         const url = 'http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99'
+        let table = document.querySelector("#data");
+        let tr = document.querySelector("#firsttr");
         document.querySelector('#updatebtn').onclick = () => {
             fetch(url)
                 .then((response) => {
-                    return response.json() // response.json()
+                    return response.json()
                 })
                 .then((data) => {
                     const row = data.RealtimeCityAir.row;
-                    let ul = document.querySelector("#data");
-
-                    // row.forEach((item) => {
-                    //     let li = document.createElement('li');
-                    //     li.textContent = `${item['MSRSTE_NM']} : ${item.PM25}`;
-                    //     document.querySelector('ul').appendChild(li);
-                    // });
-
+                    table.innerHTML = '';
+                    table.appendChild(tr);
                     row
-                        .map((city) => `<li>${city.MSRSTE_NM} : ${city.PM25} / ${city.IDEX_NM ? city.IDEX_NM : "측정불가"}</li>`)
-                        .forEach((item) => ul.insertAdjacentHTML('beforeend', item));
+                        .map((city) => `<tr><td>${city.MSRSTE_NM}</td><td>${city.PM10}</td><td>${city.PM25}</td><td>${city.IDEX_NM ? city.IDEX_NM : "측정불가"}</td></tr>`)
+                        .forEach((item) => table.insertAdjacentHTML('beforeend', item));
                 });
         };
     </script>

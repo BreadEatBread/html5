@@ -1,0 +1,22 @@
+msg : <input id="msgtext"></input>
+<input type="submit" id="btn"></input>
+
+<script>
+    document.querySelector('#btn').onclick = () => {
+        let json = JSON.stringify({
+            datetime: new Date(),
+            message: document.querySelector("#msgtext").value,
+        });
+        fetch('https://httpbin.org/post', {
+            body: json,
+            headers: { 'Content-Type': 'application/json' },
+            method: 'POST',
+        }).then((response) => {
+            return response.ok ? response.text() : Promise.reject(response.status)
+        }).then((text) => {
+            document.write(`<pre>${text}</pre>`);
+        }).catch((error) => {
+            console.error(error);
+        });
+    }
+</script>
